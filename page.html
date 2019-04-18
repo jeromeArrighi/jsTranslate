@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>jQuery Lang JS Module Test Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/js.cookie.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript">
+        var userLang = navigator.language || navigator.userLanguage;
+        var lang = new Lang();
+        lang.dynamic('fr', 'js/langs/fr.json');
+        lang.init({
+            defaultLang: 'en'
+        });
+    </script>
+</head>
+<body>
+<span lang="en">My page</span>
+</body>
